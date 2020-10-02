@@ -45,3 +45,12 @@ Um segundo arquivo de saída eh criado com os seguintes dados:
 • Quantidade de vendedores no arquivo de entrada
 • ID da venda mais cara
 • O pior vendedor
+
+
+## Biblioteca Utilizada
+Spring Integration Reference Guide
+
+Spring Integration Reference Guide<br>
+https://docs.spring.io/spring-integration/reference/html/
+<br>Documentation<br>
+https://docs.spring.io/spring-integration/api/org/springframework/integration/file/package-summary.html
