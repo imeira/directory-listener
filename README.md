@@ -3,7 +3,7 @@ Igor Meira de Jesus
 meira.igor@gmail.com
 
 ## Descrição
-Criar um sistema de análise de dados de venda que irá importar lotes de arquivos e produzir
+Sistema de análise de dados de venda que importa lotes de arquivos e produz
 um relatório baseado em informações presentes no mesmo.
 Existem 3 tipos de dados dentro dos arquivos e eles podem ser distinguidos pelo seu
 identificador que estará presente na primeira coluna de cada linha, onde o separador de
@@ -48,8 +48,6 @@ Um segundo arquivo de saída eh criado com os seguintes dados:
 
 
 ## Biblioteca Utilizada
-Spring Integration Reference Guide
-
 Spring Integration Reference Guide<br>
 https://docs.spring.io/spring-integration/reference/html/
 <br>Documentation<br>
