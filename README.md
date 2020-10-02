@@ -36,7 +36,9 @@ mvn spring-boot:run (linux)
 <br>ou <br>
 mvnw spring-boot:run (windows)
 <br>
+<br>
 *** Importante ***: Substituir a variável %HOMEPATH% no application.properties dentro da pasta resources, caso algum problema ao obter a variável ocorra ao subir a aplicação. 
+<br>
 <br>
 O sistema vai criar, caso nao exista o diretorio HOMEPATH/data/in e le continuamente todos os arquivos dentro deste diretório.
 O arquivo de saída eh movido para HOMEPATH/data/out.<br>
