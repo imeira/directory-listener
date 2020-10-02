@@ -2,7 +2,6 @@ package com.igormeira.directorylistener.service;
 
 import com.igormeira.directorylistener.data.Report;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,13 +33,18 @@ public class FileService {
         LOG.info("started -> Service TransferFileFolder" );
         try {
             LOG.info("*** Reading Source Files in -> " + env.getProperty("HOMEPATH") + env.getProperty("DIR_IN") + " *** ");
-            String fileName = (String) msg.getHeaders().get(HEADER_FILE_NAME);
-            String content = msg.getPayload();
-            LOG.info(String.format(MSG, fileName));
-            writeFileOUT(fileName, content, true);
-            deleteFileIN(fileName);
+            if (msg != null && msg.getHeaders() != null) {
+                String fileName = (String) msg.getHeaders().get(HEADER_FILE_NAME);
+                String content = msg.getPayload();
+                LOG.info(String.format(MSG, fileName));
+                writeFileOUT(fileName, content, true);
+                deleteFileIN(fileName);
+            } else {
+                writeFileReportOUT(null, new Report(), env, true);
+            }
         } catch (IOException | InterruptedException e) {
             LOG.error(e);
+            writeFileReportOUT(null, new Report(), env, true);
         }
 
     }

@@ -7,7 +7,7 @@ Criar um sistema de análise de dados de venda que irá importar lotes de arquiv
 um relatório baseado em informações presentes no mesmo.
 Existem 3 tipos de dados dentro dos arquivos e eles podem ser distinguidos pelo seu
 identificador que estará presente na primeira coluna de cada linha, onde o separador de
-colunas é o caractere “ç”.
+colunas é o character “ç”.
 
 ## Dados do vendedor
 Os dados do vendedor possuem o identificador 001 e seguem o seguinte formato:
@@ -29,15 +29,16 @@ Os dados de venda possuem o identificador 003 e seguem o seguinte formato:
 003ç10ç[1-10-100,2-30-2.50,3-40-3.10]çPedro
 003ç08ç[1-34-10,2-33-1.50,3-40-0.10]çPaulo
 
-## Funcionamento
+## Funcionamento / Instruções
 Startar o projeto SpringBoot conforme comando abaixo:
 
 mvn spring-boot:run (linux) 
 ou 
 mvnw spring-boot:run (windows)
 
+*** Importante ***: Substituir a variável %HOMEPATH% no application.properties dentro da pasta resources, caso algum problema ao obter a variável ocorra ao subir a aplicação. 
 
-O sistema vai criar, caso nao exista o diretorio HOMEPATH/data/in e le continuamente todos os arquivos dentro deste diretorio.
+O sistema vai criar, caso nao exista o diretorio HOMEPATH/data/in e le continuamente todos os arquivos dentro deste diretório.
 O arquivo de saída eh movido para HOMEPATH/data/out.
 Um segundo arquivo de saída eh criado com os seguintes dados:
 • Quantidade de clientes no arquivo de entrada

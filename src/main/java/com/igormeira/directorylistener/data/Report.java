@@ -1,7 +1,9 @@
 package com.igormeira.directorylistener.data;
 
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.ToString;
 
 import java.util.ArrayList;
 import java.util.Arrays;
